@@ -7,11 +7,10 @@ export default StyleSheet.create({
         alignItems: 'center'
     },
     topBarContainer: {
-
-    },
-    homeTitleContainer: {
-        justifyContent: 'center',
-        alignItems: 'center'
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        backgroundColor: 'red',
+        width: SIZES.width,
     },
     homeTitle: {
         color: '#000000',
