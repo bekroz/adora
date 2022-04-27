@@ -1,21 +1,11 @@
 import React from 'react';
 import {
   SafeAreaView,
-  ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
   useColorScheme,
-  View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 
 import {
   HomeScreen
@@ -24,13 +14,8 @@ import {
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: '#E7EAEF',
-
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView style={styles.container}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} backgroundColor={'#E6E9EE'} />
       <HomeScreen />
     </SafeAreaView>
@@ -39,3 +24,10 @@ const App = () => {
 
 
 export default App;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#E7EAEF',
+  }
+})

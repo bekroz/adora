@@ -1,37 +1,51 @@
-import { StyleSheet } from "react-native";
-import { POSITIONING, SIZES } from "../../../constants/theme";
+import { StyleSheet } from 'react-native';
+import { SIZES } from '../../../constants/theme';
 
 export default StyleSheet.create({
-    container: {
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    topBarContainer: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        backgroundColor: 'red',
-        width: SIZES.width,
-    },
-    homeTitle: {
-        color: '#000000',
-        fontSize: 25,
-        fontWeight: '600',
-        fontFamily: 'Inter Regular',
-    },
-    exploreBtn:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#000000',
-        opacity: 0.9,
-        borderRadius: 38,
-        width: SIZES.width * 0.8,
-        height: SIZES.height * 0.06,
-    },
-    explore: {
-        color: '#FCFCFC',
-        fontFamily: 'TenorSans Regular',
-        fontWeight: '400',
-        fontSize: 16,
-        textTransform: 'uppercase'
-    },
-})
+  container: {
+    flex: 1,
+    backgroundColor: 'red',
+  },
+  topBarContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: SIZES.width,
+  },
+  topLeftContainer: {
+    justifyContent: 'flex-start',
+    position: 'absolute',
+    left: 15,
+  },
+  topRightContainer: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    position: 'absolute',
+    right: 0,
+  },
+  homeTitle: {
+    color: '#000000',
+    fontSize: 25,
+    fontWeight: '600',
+    fontFamily: 'Inter Regular',
+  },
+  exploreBtn: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    position: 'absolute',
+    bottom: 40,
+    backgroundColor: 'rgba(0,0,0,.5)',
+    opacity: 0.9,
+    borderRadius: 38,
+    width: SIZES.width * 0.8,
+    height: SIZES.height * 0.08,
+  },
+  explore: {
+    color: '#FCFCFC',
+    fontFamily: 'TenorSans Regular',
+    fontWeight: '400',
+    fontSize: 16,
+    textTransform: 'uppercase',
+  },
+});
