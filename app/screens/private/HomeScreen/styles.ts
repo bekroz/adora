@@ -1,6 +1,14 @@
 import { StyleSheet } from "react-native";
+import { POSITIONING, SIZES } from "../../../constants/theme";
 
 export default StyleSheet.create({
+    container: {
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    topBarContainer: {
+
+    },
     homeTitleContainer: {
         justifyContent: 'center',
         alignItems: 'center'
@@ -10,5 +18,21 @@ export default StyleSheet.create({
         fontSize: 25,
         fontWeight: '600',
         fontFamily: 'Inter Regular',
-    }
+    },
+    exploreBtn:{
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#000000',
+        opacity: 0.9,
+        borderRadius: 38,
+        width: SIZES.width * 0.8,
+        height: SIZES.height * 0.06,
+    },
+    explore: {
+        color: '#FCFCFC',
+        fontFamily: 'TenorSans Regular',
+        fontWeight: '400',
+        fontSize: 16,
+        textTransform: 'uppercase'
+    },
 })

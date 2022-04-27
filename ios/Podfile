@@ -19,6 +19,10 @@ target 'adora' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  pod 'react-native-blur', :path => '../node_modules/@react-native-community/blur'
+
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
   target 'adoraTests' do
     inherit! :complete
     # Pods for testing
