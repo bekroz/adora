@@ -2,9 +2,8 @@ import { StyleSheet } from 'react-native';
 import { SIZES } from '../../../constants/theme';
 
 export default StyleSheet.create({
-  container: {
+  imgContainer: {
     flex: 1,
-    backgroundColor: 'red',
   },
   topBarContainer: {
     flexDirection: 'row',
@@ -28,6 +27,13 @@ export default StyleSheet.create({
     fontSize: 25,
     fontWeight: '600',
     fontFamily: 'Inter Regular',
+  },
+  imgStyle: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 15,
+    width: 30,
+    height: 30,
   },
   exploreBtn: {
     justifyContent: 'center',

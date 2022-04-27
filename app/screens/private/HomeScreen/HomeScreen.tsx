@@ -7,24 +7,28 @@ import {
 } from 'react-native';
 import React from 'react';
 import styles from './styles';
-import BannerImg from '../../../assets/images/banner.png';
-import MenuImg from '../../../assets/images/menu.png';
-import SearchImg from '../../../assets/images/search.png';
-import BagImg from '../../../assets/images/bag.png';
+import { BannerImg, MenuImg, SearchImg, BagImg } from '../../../constants/img';
+import { EXLORE_BUTTON_TITLE } from '../../../constants/data';
 
 const HomeScreen: React.FC = () => {
   return (
-    <ImageBackground style={{ flex: 1 }} source={BannerImg}>
+    <ImageBackground style={styles.imgContainer} source={BannerImg}>
       <View style={styles.topBarContainer}>
-        <Image source={MenuImg} style={styles.topLeftContainer} />
+        <TouchableOpacity style={styles.topLeftContainer}>
+          <Image source={MenuImg} />
+        </TouchableOpacity>
         <Text style={styles.homeTitle}>ADORA</Text>
         <View style={styles.topRightContainer}>
-          <Image source={SearchImg} style={{ marginRight: 15 }} />
-          <Image source={BagImg} style={{ marginRight: 15 }} />
+          <TouchableOpacity style={styles.imgStyle}>
+            <Image source={SearchImg} />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.imgStyle}>
+            <Image source={BagImg} />
+          </TouchableOpacity>
         </View>
       </View>
       <TouchableOpacity style={styles.exploreBtn}>
-        <Text style={styles.explore}>Explore collection</Text>
+        <Text style={styles.explore}>{EXLORE_BUTTON_TITLE}</Text>
       </TouchableOpacity>
     </ImageBackground>
   );
