@@ -5,9 +5,11 @@ import {
   StyleSheet,
   useColorScheme,
 } from 'react-native';
+import { TopBarButtons } from './app/components';
 
 import {
-  ArrivalScreen,
+  ProductsScreen,
+  // ArrivalScreen,
   //  HomeScreen
 } from './app/screens/private';
 
@@ -18,9 +20,10 @@ const App = () => {
     <SafeAreaView style={styles.container}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={'#E6E9EE'}
+        backgroundColor={'#000000'}
       />
-      <ArrivalScreen />
+      <TopBarButtons />
+      <ProductsScreen />
     </SafeAreaView>
   );
 };
@@ -30,6 +33,5 @@ export default App;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#E7EAEF',
   },
 });

@@ -5,36 +5,6 @@ export default StyleSheet.create({
   imgContainer: {
     flex: 1,
   },
-  topBarContainer: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: SIZES.width,
-  },
-  topLeftContainer: {
-    justifyContent: 'flex-start',
-    position: 'absolute',
-    left: 15,
-  },
-  topRightContainer: {
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    position: 'absolute',
-    right: 0,
-  },
-  homeTitle: {
-    color: '#000000',
-    fontSize: 25,
-    fontWeight: '600',
-    fontFamily: 'Inter Regular',
-  },
-  imgStyle: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginRight: 15,
-    width: 30,
-    height: 30,
-  },
   exploreBtn: {
     justifyContent: 'center',
     alignItems: 'center',
