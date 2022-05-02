@@ -7,13 +7,18 @@ import {
   FlatList,
   ImageSourcePropType,
 } from 'react-native';
-import { PRODUCTS_LIST } from '../../../constants/data';
+import { DUMMY_PAGE_LIST, PRODUCTS_LIST } from '../../../constants/data';
 import {
+  DividerImg,
   DropdownImg,
   Filter,
   Grid,
   HeartImg,
+  InstagramImg,
+  NextPageArrowImg,
   StarImg,
+  TwitterImg,
+  YouTubeImg,
 } from '../../../constants/img';
 import styles from './styles';
 
@@ -53,8 +58,8 @@ const renderProduct = (
               <Text style={styles.sizeBtnText}>L</Text>
             </TouchableOpacity>
           </View>
-          <TouchableOpacity>
-            <Image source={HeartImg} style={styles.likeBtn} />
+          <TouchableOpacity style={styles.likeBtn}>
+            <Image source={HeartImg} />
           </TouchableOpacity>
         </View>
       </View>
@@ -80,13 +85,47 @@ const ProductsScreen: React.FC = () => {
           </TouchableOpacity>
         </View>
       </View>
-      {/* Product */}
       <FlatList
         data={PRODUCTS_LIST}
         renderItem={({ item, index }) => renderProduct(item, index)}
         ListFooterComponent={() => (
-          <View style={{ backgroundColor: 'red', height: 20 }}>
-            <Text>231231</Text>
+          <View style={styles.productListBottomContainer}>
+            <View style={styles.pageContainer}>
+              {DUMMY_PAGE_LIST.map(page => (
+                <TouchableOpacity key={page} style={styles.pageBtn}>
+                  <Text style={styles.pageText}>{page}</Text>
+                </TouchableOpacity>
+              ))}
+              <TouchableOpacity>
+                <Image source={NextPageArrowImg} style={styles.nextPageArrow} />
+              </TouchableOpacity>
+            </View>
+            <View style={styles.socialContainer}>
+              <TouchableOpacity>
+                <Image source={TwitterImg} style={styles.socialBtnStyle} />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image source={InstagramImg} style={styles.socialBtnStyle} />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image source={YouTubeImg} style={styles.socialBtnStyle} />
+              </TouchableOpacity>
+            </View>
+            <View style={styles.footerContainer}>
+              <Image source={DividerImg} style={styles.divider} />
+              <Text>bekrozdev@gmail.com</Text>
+              <Text>+998 90 416 28 97</Text>
+              <Text>09:00 ~ 20:00 - Everyday</Text>
+              <Image source={DividerImg} style={styles.divider} />
+              <View style={styles.linkContainer}>
+                <Text style={styles.link}>About</Text>
+                <Text style={styles.link}>Contact</Text>
+                <Text style={styles.link}>Blog</Text>
+              </View>
+              <View style={styles.copyrightContainer}>
+                <Text>Copyright© OpenUI All Rights Reserved.</Text>
+              </View>
+            </View>
           </View>
         )}
       />

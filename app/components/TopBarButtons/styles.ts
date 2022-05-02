@@ -3,7 +3,6 @@ import { SIZES } from '../../constants/theme';
 
 export default StyleSheet.create({
   topBarContainer: {
-    // position: 'absolute',
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
@@ -13,7 +12,7 @@ export default StyleSheet.create({
     color: '#000000',
     fontSize: 25,
     fontWeight: '600',
-    fontFamily: 'Inter Regular',
+    // fontFamily: 'Inter Regular',
   },
   topLeftContainer: {
     justifyContent: 'flex-start',

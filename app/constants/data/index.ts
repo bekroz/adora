@@ -116,3 +116,5 @@ export const PRODUCTS_LIST = [
     price: 199,
   },
 ];
+
+export const DUMMY_PAGE_LIST = ['1', '2', '3', '4', '5', '6'];

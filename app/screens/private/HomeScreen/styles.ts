@@ -19,7 +19,7 @@ export default StyleSheet.create({
   },
   explore: {
     color: '#FCFCFC',
-    fontFamily: 'TenorSans Regular',
+    // fontFamily: 'TenorSans Regular',
     fontWeight: '400',
     fontSize: 16,
     textTransform: 'uppercase',

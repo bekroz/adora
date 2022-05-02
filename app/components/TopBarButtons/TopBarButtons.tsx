@@ -9,7 +9,7 @@ const TopBarButtons = () => {
       <TouchableOpacity style={styles.topLeftContainer}>
         <Image source={MenuImg} />
       </TouchableOpacity>
-      <Text style={styles.topBarTitle}>ADORA</Text>
+      <Text style={styles.topBarTitle}>Adora</Text>
       <View style={styles.topRightContainer}>
         <TouchableOpacity style={styles.imgStyle}>
           <Image source={SearchImg} />

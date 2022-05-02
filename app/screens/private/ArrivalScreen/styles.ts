@@ -6,13 +6,14 @@ export default StyleSheet.create({
     flex: 1,
   },
   topTitle: {
-    fontFamily: 'TenorSans Regular',
+    // fontFamily: 'TenorSans Regular',
     fontStyle: 'normal',
     fontWeight: '400',
     fontSize: 18,
     textAlign: 'center',
     letterSpacing: 4,
     textTransform: 'uppercase',
+    marginTop: 10,
   },
   categoryTitlesContainer: {
     flexDirection: 'row',
@@ -38,7 +39,7 @@ export default StyleSheet.create({
     overflow: 'hidden',
   },
   description: {
-    fontFamily: 'Tenor Sans',
+    // fontFamily: 'Tenor Sans',
     fontStyle: 'normal',
     fontWeight: '400',
     fontSize: 12,
@@ -47,7 +48,7 @@ export default StyleSheet.create({
     marginVertical: 5,
   },
   price: {
-    fontFamily: 'Tenor Sans',
+    // fontFamily: 'Tenor Sans',
     fontStyle: 'normal',
     fontWeight: '400',
     fontSize: 15,
@@ -63,12 +64,13 @@ export default StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,.9)',
     opacity: 0.9,
     borderRadius: 38,
-    width: SIZES.width * 0.6,
+    width: SIZES.width * 0.9,
     height: SIZES.height * 0.06,
   },
   exploreMore: {
     color: 'white',
     marginRight: 5,
+    fontSize: 16,
   },
   arrowRightImg: {
     tintColor: 'white',

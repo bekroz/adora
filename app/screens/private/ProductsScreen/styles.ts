@@ -14,7 +14,7 @@ export default StyleSheet.create({
   topText: {
     color: '#333333',
     fontSize: 14,
-    fontweight: '400',
+    fontWeight: '400',
     textTransform: 'uppercase',
     left: -10,
   },
@@ -39,7 +39,7 @@ export default StyleSheet.create({
   },
   categoryText: {
     color: '#000000',
-    fontFamily: 'Tenor Sans',
+    // fontFamily: 'Tenor Sans',
     fontStyle: 'normal',
     fontWeight: '400',
     fontSize: 13,
@@ -54,7 +54,7 @@ export default StyleSheet.create({
   },
   productName: {
     color: '#000000',
-    fontFamily: 'Tenor Sans',
+    // fontFamily: 'Tenor Sans',
     fontStyle: 'normal',
     fontWeight: '400',
     fontSize: 14,
@@ -63,7 +63,7 @@ export default StyleSheet.create({
   },
   price: {
     color: '#DD8560',
-    fontFamily: 'Tenor Sans',
+    // fontFamily: 'Tenor Sans',
     fontStyle: 'normal',
     fontWeight: '400',
     fontSize: 15,
@@ -105,7 +105,7 @@ export default StyleSheet.create({
   },
   sizeBtnText: {
     color: '#000000',
-    fontFamily: 'Tenor Sans',
+    // fontFamily: 'Tenor Sans',
     fontStyle: 'normal',
     fontWeight: '400',
     fontSize: 12,
@@ -113,5 +113,59 @@ export default StyleSheet.create({
   },
   likeBtn: {
     marginHorizontal: 10,
+  },
+  productListBottomContainer: {
+    height: 'auto',
+  },
+  pageContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginVertical: 25,
+  },
+  pageBtn: {
+    backgroundColor: '#000000',
+    marginHorizontal: 10,
+    height: 32,
+    width: 32,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  pageText: {
+    color: '#FFFFFF',
+  },
+  nextPageArrow: {
+    tintColor: '#000000',
+  },
+  socialContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  socialBtnStyle: {
+    tintColor: '#000000',
+    marginHorizontal: 25,
+  },
+  footerContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  divider: {
+    alignSelf: 'center',
+    margin: 10,
+  },
+  linkContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 5,
+    marginBottom: 15,
+  },
+  link: {
+    marginHorizontal: 20,
+  },
+  copyrightContainer: {
+    backgroundColor: 'rgba(248, 248, 248, 1)',
+    width: '100%',
+    alignItems: 'center',
+    paddingVertical: 15,
   },
 });

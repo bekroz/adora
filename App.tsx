@@ -1,29 +1,23 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-  StyleSheet,
-  useColorScheme,
-} from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import { TopBarButtons } from './app/components';
 
 import {
-  ProductsScreen,
-  // ArrivalScreen,
-  //  HomeScreen
+  // ProductsScreen,
+  ArrivalScreen,
+  // HomeScreen,
 } from './app/screens/private';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+        barStyle={'light-content'}
+        animated={true}
         backgroundColor={'#000000'}
       />
       <TopBarButtons />
-      <ProductsScreen />
+      <ArrivalScreen />
     </SafeAreaView>
   );
 };
