@@ -1,1 +1,7 @@
-export { TopBarButtons } from './TopBarButtons';
+import { TopBarButtons } from './TopBarButtons';
+
+const Components = {
+  TopBarButtons: TopBarButtons,
+};
+
+export default Components;

@@ -1,13 +1,8 @@
-import { FlatList, Image, ImageSourcePropType, Text, View } from 'react-native';
 import React from 'react';
+import RN from '../../../components/common/React/react-native';
+import { ImageSourcePropType } from 'react-native';
 import styles from './styles';
-import {
-  ARRIVALS_LIST,
-  ARRIVAL_CATEGORIES,
-  ARRIVAL_TITLE,
-  EXPLORE_MORE,
-} from '../../../constants/data';
-import { TouchableOpacity } from 'react-native';
+import CONSTANT_DATA from '../../../constants/data';
 
 interface ArrivalProps {
   name: string;
@@ -17,45 +12,47 @@ interface ArrivalProps {
 }
 
 const renderCategoryTitles = () => {
-  return ARRIVAL_CATEGORIES.map(title => (
-    <View key={title} style={styles.categoryTitle}>
-      <Text>{title}</Text>
-    </View>
+  return CONSTANT_DATA.arrivalCategories.map(title => (
+    <RN.View key={title} style={styles.categoryTitle}>
+      <RN.Text>{title}</RN.Text>
+    </RN.View>
   ));
 };
 
 const renderArrivals = ({ name, imgUri, description, price }: ArrivalProps) => (
-  <View key={name} style={styles.arrivalContainer}>
-    <Image source={imgUri} style={styles.modelImg} />
-    <View style={styles.infoContainer}>
-      <Text style={styles.description}>{description}</Text>
-      <Text style={styles.price}>${price}</Text>
-    </View>
-  </View>
+  <RN.View key={name} style={styles.arrivalContainer}>
+    <RN.Image source={imgUri} style={styles.modelImg} />
+    <RN.View style={styles.infoContainer}>
+      <RN.Text style={styles.description}>{description}</RN.Text>
+      <RN.Text style={styles.price}>${price}</RN.Text>
+    </RN.View>
+  </RN.View>
 );
 
 const ArrivalScreen: React.FC = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.topTitle}>{ARRIVAL_TITLE}</Text>
-      <View style={styles.categoryTitlesContainer}>
+    <RN.View style={styles.container}>
+      <RN.Text style={styles.topTitle}>{CONSTANT_DATA.arrivalTitle}</RN.Text>
+      <RN.View style={styles.categoryTitlesContainer}>
         {renderCategoryTitles()}
-      </View>
+      </RN.View>
 
-      <FlatList
-        data={ARRIVALS_LIST}
+      <RN.FlatList
+        data={CONSTANT_DATA.arrivalsList}
         renderItem={({ item }) => renderArrivals(item)}
         contentContainerStyle={styles.imgScrollContainer}
         numColumns={2}
       />
-      <TouchableOpacity style={styles.exploreMoreBtn}>
-        <Text style={styles.exploreMore}>{EXPLORE_MORE}</Text>
-        <Image
+      <RN.TouchableOpacity style={styles.exploreMoreBtn}>
+        <RN.Text style={styles.exploreMore}>
+          {CONSTANT_DATA.exploreMore}
+        </RN.Text>
+        <RN.Image
           source={require('../../../assets/images/arrow-right.png')}
           style={styles.arrowRightImg}
         />
-      </TouchableOpacity>
-    </View>
+      </RN.TouchableOpacity>
+    </RN.View>
   );
 };
 
