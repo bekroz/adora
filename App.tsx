@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
-import { TopBarButtons } from './app/components';
+import Components from './app/components';
 
 import {
   // ProductsScreen,
@@ -16,7 +16,7 @@ const App = () => {
         animated={true}
         backgroundColor={'#000000'}
       />
-      <TopBarButtons />
+      <Components.TopBarButtons />
       <ArrivalScreen />
     </SafeAreaView>
   );
